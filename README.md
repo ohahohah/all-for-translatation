@@ -1,5 +1,5 @@
 # 여러 번역 비교하기 귀찮아서 만든 프로젝트
-영한 기술 번역을 하고 있습니다. 저는 초벌번역을 자동번역으로 하고 이후에 수정하면서 번역합니다. 번역을 조금 더 매끄럽게 하기 위해, 같은 글을 영어 외 다른 언어로 된 번역된 글도 참고 합니다여러 사이트의 번역(Google, Papago,...) 을 비교하는데 브라우저 창 이동하기 귀찮아요. 한 번에 비교해서 보기 위해 만들었습니다. 도구이니 최대한 적은 시간을 들여 간단하게 만들 겁니다.
+여러 사이트의 번역(Google, Papago,...) 을 비교하는데 브라우저 창 이동하기 귀찮아요. 한 번에 비교해서 보기 위해 만들었습니다. 영한 기술 번역을 하고 있습니다. 저는 초벌번역을 자동번역으로 하고 이후에 수정하면서 번역합니다. 번역을 조금 더 매끄럽게 하기 위해, 같은 글을 영어 외 다른 언어로 된 번역된 글도 참고 합니다. 도구이니 최대한 적은 시간을 들여 간단하게 만들 겁니다.
 
 ## 요구사항
 ### Version 01
@@ -16,7 +16,7 @@
 
 ## 구성
 ### Version 01
-- Front : [sketch2code](https://sketch2code.azurewebsites.net/) 로 html 자동 생성
+- Front : [화면스케치(이미지)](https://user-images.githubusercontent.com/17819874/74639158-b9b59300-51b0-11ea-9203-d3d81e222e46.jpeg)를 [sketch2code](https://sketch2code.azurewebsites.net/) 로 html 자동 생성 
 - API : Flask
 - Infra : AWS EC2 또는 GCP GCE 둘 중 저렴한 것
 - Server : Flask 내장 서버 또는 Nginx
