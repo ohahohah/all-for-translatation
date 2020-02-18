@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/main.css') }}">
+
+    <title>Something for translation</title>
+</head>
+<body>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+<div class="container body-content">
+    <div class="container">
+        <div class="row justify-content-start row-padding">
+            <h1>여러 번역 찾아보기 귀찮아서 만든 사이트</h1>
+        </div>
+
+        <div class="row justify-content-center row-padding">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="google-chk" value="google">
+                <label class="form-check-label" for="google-chk">Google Translate</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="papago-chk" value="papago" disabled>
+                <label class="form-check-label" for="inlineCheckbox2">papago (coming soon)</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="kakao-chk" value="kakao" disabled>
+                <label class="form-check-label" for="inlineCheckbox3">Kakao (coming soon)</label>
+            </div>
+        </div>
+
+
+        <div class="row justify-content-start row-padding">
+            <label class="large-txt" for="start-lang">영어</label>
+            <textarea class="form-control" id="start-lang" rows="5" placeholder="Enter text"></textarea>
+        </div>
+
+        <div class="row justify-content-start row-padding">
+            <button class="btn btn-primary">번역하기</button>
+        </div>
+
+        <div class="row justify-content-start row-padding">
+            <label class="large-txt" for="arrive-lang">번역결과 - 한국어</label>
+            <textarea class="form-control" id="arrive-lang" rows="5" placeholder="Translation"></textarea>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
