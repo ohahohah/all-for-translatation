@@ -16,9 +16,9 @@
 
 ## 구성
 ### Version 01
-- Front : [화면스케치(이미지)](https://user-images.githubusercontent.com/17819874/74639158-b9b59300-51b0-11ea-9203-d3d81e222e46.jpeg)를 [sketch2code](https://sketch2code.azurewebsites.net/) 로 html 자동 생성 
+- Front : Bootstrap 
 - API : Flask
-- Infra : AWS EC2 또는 GCP GCE 둘 중 저렴한 것
+- Infra : GCP GCE([항상 무료 사용한도](https://cloud.google.com/free/docs/gcp-free-tier?hl=ko)) / Ubuntu 16.04 LTS
 - Server : Flask 내장 서버 또는 Nginx
 
 ### Version 02
