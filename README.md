@@ -17,7 +17,8 @@
 ## 구성
 ### Version 01
 - Front : Bootstrap 
-- API : Flask
+- Backend : Flask
+- API : [googletrans](https://py-googletrans.readthedocs.io/en/latest/)
 - Infra : GCP GCE([항상 무료 사용한도](https://cloud.google.com/free/docs/gcp-free-tier?hl=ko)) / Ubuntu 16.04 LTS
 - Server : Flask 내장 서버 또는 Nginx
 

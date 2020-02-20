@@ -12,9 +12,8 @@
     <title>Something for translation</title>
 </head>
 <body>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
@@ -30,36 +29,58 @@
 
         <div class="row justify-content-center row-padding">
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="google-chk" value="google">
+                <input class="form-check-input" type="checkbox" id="google-chk" value="google" checked disabled>
                 <label class="form-check-label" for="google-chk">Google Translate</label>
             </div>
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="checkbox" id="papago-chk" value="papago" disabled>
-                <label class="form-check-label" for="inlineCheckbox2">papago (coming soon)</label>
+                <label class="form-check-label" for="papago-chk">papago (coming soon)</label>
             </div>
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="checkbox" id="kakao-chk" value="kakao" disabled>
-                <label class="form-check-label" for="inlineCheckbox3">Kakao (coming soon)</label>
+                <label class="form-check-label" for="kakao-chk">Kakao (coming soon)</label>
             </div>
         </div>
 
 
         <div class="row justify-content-start row-padding">
-            <label class="large-txt" for="start-lang">영어</label>
-            <textarea class="form-control" id="start-lang" rows="5" placeholder="Enter text"></textarea>
+            <label class="large-txt" for="src-txt">원문</label>
+            <textarea class="form-control" id="src-txt" rows="5" placeholder="Enter text"></textarea>
         </div>
 
         <div class="row justify-content-start row-padding">
-            <button class="btn btn-primary">번역하기</button>
+            <button class="btn btn-primary" onclick="get_src()">번역하기</button>
         </div>
 
         <div class="row justify-content-start row-padding">
-            <label class="large-txt" for="arrive-lang">번역결과 - 한국어</label>
-            <textarea class="form-control" id="arrive-lang" rows="5" placeholder="Translation"></textarea>
+            <label class="large-txt" for="dest-txt-google">한국어 (Google)</label>
+            <textarea class="form-control" id="dest-txt-google" rows="5" placeholder="Translation(Google)"></textarea>
+            <!--
+            <label class="large-txt" for="dest-txt-papago">한국어 (Papago)</label>
+            <textarea class="form-control" id="dest-txt-papago" rows="5" placeholder="Translation(Papago)"></textarea>
+            -->
         </div>
     </div>
 </div>
 
+<!-- <script src="{{ url_for('static',filename='js/main.js') }}"></script> -->
+
+<script>
+    function get_src() {
+        let txt = $('#src-txt').val();
+
+        $.ajax({
+            type: 'POST',
+            url: '/translate',
+            data: {src_txt: txt},
+            success: function (response) {
+                console.log(response['google_txt'])
+                $('dest-txt-google').val(response['google_txt'])
+            }
+        })
+    }
+</script>
 
 </body>
+
 </html>
