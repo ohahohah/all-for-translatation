@@ -18,7 +18,7 @@
 ### Version 01
 - Front : Bootstrap 
 - Backend : Flask
-- API : [googletrans](https://py-googletrans.readthedocs.io/en/latest/)
+- API : [googletrans](https://py-googletrans.readthedocs.io/en/latest/), [PAPAGO 번역](https://developers.naver.com/products/nmt/), [PAPAGO 언어감지](https://developers.naver.com/products/detectLangs/) 
 - Infra : GCP GCE([항상 무료 사용한도](https://cloud.google.com/free/docs/gcp-free-tier?hl=ko)) / Ubuntu 16.04 LTS
 - Server : Flask 내장 서버 또는 Nginx
 
