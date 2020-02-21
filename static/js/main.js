@@ -1,13 +1,16 @@
-function get_src() {
+function autotranslate() {
     let txt = $('#src-txt').val();
-    console.log('get')
+    console.log(txt)
+    console.log('test function')
 
     $.ajax({
         type: 'POST',
         url: '/translate',
         data: {src_txt: txt},
         success: function (response) {
-            $('dest-txt-google').val(response['google_txt'])
+            console.log(response['google_txt'])
+            $('#dest-txt-google').text(response['google_txt'])
         }
     })
+
 }
