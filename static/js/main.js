@@ -8,6 +8,7 @@ function autotranslate() {
         success: function (response) {
             $('#dest-txt-google').text(response['google'])
             $('#dest-txt-papago').text(response['papago'])
+            $('#dest-txt-kakao').text(response['kakao'])
         }
     })
 }
